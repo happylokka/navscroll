@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>lokka</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<style type="text/css" media="screen">
+		
+		.wrapper {
+			position: fixed;
+			top: 0;
+			left: 0;
+			height: 0.8rem;
+			width: 100%;
+			overflow: hidden;
+			margin:0 auto;
+			border-bottom:1px solid #ccc;
+		}
+		.wrapper .scroller {
+			width: 100%;
+			position:absolute;
+		}
+		.wrapper .scroller li {
+			width: 50px;
+			height: 0.8rem;
+			padding: 0 10px;
+			color:#333;
+			float: left;
+			line-height: 0.8rem;
+			font-size: 14px;
+			text-align: center;
+		}
+		.wrapper .scroller li a{
+			position: relative;
+			color:#333;
+			display:block;
+		}
+		.wrapper .scroller li.active a:after{
+    		content: '';
+    		width: 0.8rem;
+    		height: 0.08rem;
+    		background: #e60111;
+    		display: inline-block;
+    		position: absolute;
+    		bottom: 0;
+    		left: 50%;
+    		margin-left: -0.4rem;
+		}
+
+	</style>
+</head>
+<script type="text/javascript" src="http://res1.ynet.com/122/jquery.min.js"></script>
+<script type="text/javascript" src="js/base.js"></script>
+<script type="text/javascript" src="js/iscroll.js"></script>
+<script type="text/javascript" src="js/navscroll.js"></script>
+<body>
+	<div class="wrapper" id="nav">
+		<div class="scroller">
+			<ul class="clearfix">
+				<li><a href="javascript:void(0)">新闻</a></li>
+				<li><a href="javascript:void(0)">体育</a></li>
+				<li><a href="javascript:void(0)">娱乐</a></li>
+				<li><a href="javascript:void(0)">财经</a></li>
+				<li><a href="javascript:void(0)">军事</a></li>
+				<li><a href="javascript:void(0)">北京</a></li>
+				<li><a href="javascript:void(0)">法制</a></li>
+				<li><a href="javascript:void(0)">NBA</a></li>
+				<li><a href="javascript:void(0)">CBA</a></li>
+				<li><a href="javascript:void(0)">科技</a></li>
+				<li><a href="javascript:void(0)">汽车</a></li>
+				<li><a href="javascript:void(0)">房产</a></li>
+				<li><a href="javascript:void(0)">国际</a></li>
+				<li><a href="javascript:void(0)">图片</a></li>
+				<li><a href="javascript:void(0)">足球</a></li>
+				<li><a href="javascript:void(0)">中超</a></li>
+				<li><a href="javascript:void(0)">手机</a></li>
+			</ul>
+		</div>
+</div>
+
+</body>
+<script type="text/javascript">
+		
+		$('#nav').navscroll();
+		
+</script>
+</html>
