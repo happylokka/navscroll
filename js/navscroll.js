@@ -1,13 +1,12 @@
 (function ($) {
 
     $.fn.navscroll = function (options) {
-        var defaults = {
+        
+        options = Object.assign({
             scrollTime: 300, // 滑动时间
             defaultClick: 0, // 初始选中第n个，默认第0个
-            scrollCallback: function(thisCallback) {} // 回调函数
-        }
-
-        var opt = $.extend(defaults, options);
+            scrollCallback: function() {} // 回调函数
+        },options);
 
         //阻止默认事件
         document.addEventListener('touchstart',function(ev){
@@ -20,7 +19,7 @@
         var scroller = $(wrapper).find('.scroller');
         var s_li = $(scroller).find('li');
         var scrollerW = 0;
-        $(s_li).eq(opt.defaultClick).addClass('active').siblings().removeClass('active');
+        $(s_li).eq(options.defaultClick).addClass('active').siblings().removeClass('active');
 
         $.each(s_li, function(i,v) {
             scrollerW += $(v).outerWidth();
@@ -41,7 +40,7 @@
         });
         
     
-    init($(s_li).eq(opt.defaultClick));    
+    init($(s_li).eq(options.defaultClick));    
 
     $(s_li).click(function(){
         init($(this));
@@ -75,7 +74,7 @@
             }
 
         }
-        opt.scrollCallback.call(this,$this);
+        options.scrollCallback(thisli);
     }
     }
 })(jQuery);
