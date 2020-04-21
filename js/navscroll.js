@@ -5,7 +5,7 @@
         options = Object.assign({
             scrollTime: 300, // 滑动时间
             defaultClick: 0, // 初始选中第n个，默认第0个
-            scrollCallback: function() {} // 回调函数
+            scrollCallback: function(obj) {} // 回调函数
         },options);
 
         //阻止默认事件

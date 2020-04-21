@@ -16,7 +16,7 @@
 ```js
     scrollTime: 300, // 滑动时间 默认300
     defaultClick: 0, // 初始选中第n个，默认第0个
-    scrollCallback: function(thisCallback) {} // 回调函数
+    scrollCallback: function(obj) {} // 回调函数
 ```
 
 ### 调用说明
@@ -32,7 +32,7 @@
     	$('#nav').navscroll({
 		scrollTime: 500, // 滑动时间 默认300
    		defaultClick: 3, // 初始选中第n个，默认第0个
-    		scrollCallback: function(thisCallback) {} // 回调函数
+    	scrollCallback: function(obj) {} // 回调函数
 	});
 ```
 
